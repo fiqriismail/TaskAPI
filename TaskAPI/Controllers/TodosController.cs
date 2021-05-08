@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TaskAPI.Models;
 using TaskAPI.Services;
 
 namespace TaskAPI.Controllers
@@ -13,11 +12,11 @@ namespace TaskAPI.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
-        private TodoService _todoService;
+        private readonly ITodoRepository _todoService;
 
-        public TodosController()
+        public TodosController(ITodoRepository repository)
         {
-            _todoService = new TodoService();
+            _todoService = repository;
         }
 
         [HttpGet("{id?}")]

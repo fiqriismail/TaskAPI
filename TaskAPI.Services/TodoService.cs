@@ -6,7 +6,7 @@ using TaskAPI.Models;
 
 namespace TaskAPI.Services
 {
-    public class TodoService
+    public class TodoService : ITodoRepository
     {
         // Get Todos
         public List<Todo> AllTodos()
