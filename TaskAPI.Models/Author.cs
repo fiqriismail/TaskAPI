@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TaskAPI.Models;
 
-namespace TaskAPI.Services
+namespace TaskAPI.Models
 {
-    public interface ITodoRepository
+    public class Author
     {
-        public List<Todo> AllTodos();
+        public int Id { get; set; }
+        public string FullName { get; set; }
     }
 }
