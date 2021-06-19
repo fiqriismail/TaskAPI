@@ -22,10 +22,10 @@ namespace TaskAPI.DataAccess
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Author>().HasData(new Author[] {
-                new Author { Id = 1, FullName = "Fiqri Ismail"},
-                new Author { Id = 2, FullName = "Prabhashwara Bandara"},
-                new Author { Id = 3, FullName = "Chaminda Sooriyapperuma"},
-                new Author { Id = 4, FullName = "Hansamali Gamage"}
+                new Author { Id = 1, FullName = "Fiqri Ismail", AddressNo = "45", Street = "Street 1", City = "Colombo 1"},
+                new Author { Id = 2, FullName = "Prabhashwara Bandara", AddressNo = "35", Street = "Street 2", City = "Colombo 2"},
+                new Author { Id = 3, FullName = "Chaminda Sooriyapperuma", AddressNo = "25", Street = "Street 3", City = "Colombo 3"},
+                new Author { Id = 4, FullName = "Hansamali Gamage", AddressNo = "15", Street = "Street 4", City = "Colombo 4"}
             });
 
             modelBuilder.Entity<Todo>().HasData(new Todo[]
