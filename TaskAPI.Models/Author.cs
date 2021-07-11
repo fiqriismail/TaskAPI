@@ -20,6 +20,9 @@ namespace TaskAPI.Models
         [Required]
         [MaxLength(50)]
         public string City { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string JobRole { get; set; }
         public ICollection<Todo> Todos { get; set; } = new List<Todo>();
     }
 }
